@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <QWidget>
+#include <QtWidgets>
+#include <renderarea.h>
+#include <colors.h>
 
 namespace Ui {
 class Window;
@@ -18,9 +21,23 @@ public:
 
 public slots:
     void openFile(const QString &path = QString());
-    
+    //void saveFile();
+
+private slots:
+    void createFile();
+    void aboutVge();
+    void setColor();
 private:
-    Ui::Window *ui;
+
+    RenderArea *area;
+    QScrollArea *scrollArea;
+    ColorWidget *firstColorWidget;
+    ColorWidget *secondColorWidget;
+    QColor *firstColor;
+    QColor *secondColor;
+    //QPixmap *colorIcon;
+    //QColor *color;
+    //QAction *colorSelect;
 };
 
 #endif // WINDOW_H

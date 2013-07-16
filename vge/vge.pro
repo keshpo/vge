@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         window.cpp \
-    renderarea.cpp
+    renderarea.cpp \
+    colors.cpp
 
 HEADERS  += window.h \
-    renderarea.h
+    renderarea.h \
+    colors.h
 
 FORMS    += window.ui
 
